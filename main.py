@@ -4,10 +4,13 @@ import os
 USERNAME = os.environ['username']
 PASSWORD = os.environ['password']
 
+projectID = "950783494"
+
 session = scratch3.login(USERNAME, PASSWORD)
-conn = session.connect_cloud("950783494")
+conn = session.connect_cloud(projectID)
 
 client = scratch3.CloudRequests(conn)
+events = scratch3.WsCloudEvents(projectID, conn)
 
 
 @client.request
