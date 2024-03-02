@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "Looks like it's your first time creating an issue. Welcome to the ScratchCredit repo!"
+        pr-message: "Looks like it's your first time creating a pull request. Welcome to the ScratchCredit repo!"
