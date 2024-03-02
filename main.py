@@ -24,11 +24,13 @@ def balance(argument1):
 
 @client.request
 def give_sc(argument1, argument2):
-    print(f"Somebody requested giving {argument2} SC to {argument1}")
+    args2and3 = argument2.split()
+    print(f"{args2and3[1]} requested giving {args2and3[0]} SC to {argument1}")
     return ["NOTICE:",
             "The ScratchCredit API hasn't been implemented yet, but the request has still been ",
-            f"recieved successfully either way. (You tried giving {argument2} SC to {argument1})",
-            f"You'll be able to give {argument2} SC to {argument1} when the API gets up and running.",
+            "recieved successfully either way.",
+            f"({args2and3[1]} tried giving {args2and3[0]} SC to {argument1})",
+            f"You'll be able to give {args2and3[0]} SC to {argument1} when the API gets up and running.",
             "THANKS FOR THE GENEROSITY, THOUGH!"]
 
 
