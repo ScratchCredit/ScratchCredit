@@ -16,7 +16,7 @@ def sc_balance(argument1):
     return ["NOTICE:",
             "The ScratchCredit API hasn't been implemented yet, but the request has still ",
             "been recieved successfully either way.",
-            f"({argument1} tried viewing their balance)",
+            f"({argument1} tried looking at their balance)",
             "Your balance will be automatically set to 100 ScratchCredits when the API gets ",
             "up and running. If the API were to be implemented, it would've only outputted:",
             "100 (or more, if you get more SC from making your own shop, or, of course, "
