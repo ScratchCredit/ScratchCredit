@@ -19,10 +19,7 @@ def sc_balance(argument1):
             f"({argument1} tried looking at their balance)",
             "Your balance will be automatically set to 100 ScratchCredits when the API gets ",
             "up and running. If the API were to be implemented, it would've only outputted:",
-            "100 (or more, if you get more SC from making your own shop, or, of course, "
-            "being famous and well known on Scratch, or getting SC from Youssef as he "
-            "sets people's SC balance, possibly giving them, and maybe even you, lots "
-            "of SC)",
+            "100 (or more, if you get more SC from hosting your own shop)",
             "COME BACK SOON!"]
 
 
