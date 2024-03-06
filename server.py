@@ -37,7 +37,7 @@ def give_sc(argument1, argument2):
 
 @client.event
 def on_ready():
-    print("\033[1mScratchCredit's server has REALLY gone up this time and is currently receiving requests!\n\033[0mNow people can start using ScratchCredit!")
+    print("\033[1mScratchCredit's ScratchAttach server has gone up and is currently receiving requests!\n\033[0mNow people can start using ScratchCredit!")
 
 
 @client.event

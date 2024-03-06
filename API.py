@@ -15,7 +15,7 @@ transactions = LDD['dict_transactions']
 
 
 
-def history(inp):
+def history(inp: str) -> dict:
     out = []
     t = str(transactions)
     t = ast.literal_eval(t)
@@ -36,17 +36,17 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return """
-    This is the BlockBit API!<br>
-    <b>/balance/[user]</b> returns the specified user's balance. [<a href='/balance/yippymishy'>example</a>]<br>
+    This is the ScratchCredit API!<br>
+    <b>/balance/[user]</b> returns the specified user's balance. [<a href='/balance/yousseftv'>example</a>]<br>
     <b>/transaction/[id]</b> returns info about the specified transaction. [<a href='/transaction/1683315285'>example</a>]<br>
-    <b>/history/[user]</b> returns the specified user's transaction history. [<a href='/history/yippymishy'>example</a>]<br><br>
+    <b>/history/[user]</b> returns the specified user's transaction history. [<a href='/history/yousseftv'>example</a>]<br><br>
     """
 
 
 
 
 @app.route('/home')
-def main():
+def main() -> str:
     stylesheet = open("templates/index.css", "r").read()
     return render_template('index.html', stylesheet=stylesheet)
 
@@ -54,7 +54,7 @@ def main():
 
 
 @app.route('/balance/<user>')
-def getBalance(user):
+def getBalance(user: str) -> dict:
     try:
         out = {"balance": db[user.lower()]}
     except KeyError:
@@ -65,7 +65,7 @@ def getBalance(user):
 
 
 @app.route('/transaction/<id>')
-def getByID(id):
+def getByID(id: int):
     try:
         out = transactions[id]
     except KeyError:
@@ -76,11 +76,11 @@ def getByID(id):
 
 
 @app.route('/history/<user>')
-def getHistory(user):
+def getHistory(user: str):
     return history(user.lower())
 
 
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=81)
+    app.run(host="0.0.0.0", port=81, debug=True)
