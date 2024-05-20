@@ -7,7 +7,7 @@ body, h1, h2, h3, p, ul, li {
 /* Set some basic styles for the body */
 body {
   font-family: Arial, sans-serif;
-  color: #333;
+  color: rgb(51, 51, 51);
 }
 
 /* Style the header */

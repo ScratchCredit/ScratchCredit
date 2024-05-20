@@ -3,12 +3,15 @@ import os
 import subprocess
 import time
 
-os.system('pip install scratchattach local-simple-database Flask')
+os.system("pip install scratchattach local-simple-database Flask")
 
-print('\033[1m===== ScratchCredit Server =====\033[0m')
+print("Install job done, now delaying for 1s\n")
+time.sleep(1)
+
+print("\033[1m===== ScratchCredit Server =====\033[0m")
 print("--------------------------------")
 
-def kill_process_by_name(name):
+def kill_process_by_name(name: str):
     subprocess.call(['pkill', '-f', name])
 
 
