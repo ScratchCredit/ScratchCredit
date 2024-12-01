@@ -83,4 +83,6 @@ def getHistory(user: str):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=81, debug=True)
+    import os
+    debug_mode = os.getenv('FLASK_ENV') == 'development'
+    app.run(host="0.0.0.0", port=81, debug=debug_mode)
