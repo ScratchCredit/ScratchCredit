@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from local_simple_database import LocalDictDatabase
+from os import getenv
 import ast
 
 
@@ -83,4 +84,5 @@ def getHistory(user: str):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=81, debug=True)
+    debug_mode = getenv('FLASK_ENV') == 'development'
+    app.run(host="0.0.0.0", port=81, debug=debug_mode)
